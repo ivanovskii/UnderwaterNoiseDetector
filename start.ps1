@@ -18,6 +18,7 @@ if ((Test-Path -Path $requirements) -and !(Test-Path -Path $venv))
     python -m venv $venv_name
     iex (".\" + $venv_name + "\Scripts\activate")
     pip install -r $requirements_name
+    jupyter contrib nbextension install --user
 }
 
 python -m notebook
